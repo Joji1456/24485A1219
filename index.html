@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Campus Notifications</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 600px; margin: 40px auto; padding: 0 20px; }
+    h1 { color: #333; }
+    ul { list-style: none; padding: 0; }
+    li { background: #f0f4ff; margin: 10px 0; padding: 15px; border-radius: 6px; border-left: 4px solid #4a6cf7; }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <h1>Campus Notifications</h1>
+    <ul id="notifications">Loading...</ul>
+  </div>
+  <script>
+    fetch("/api/notifications")
+      .then(res => res.json())
+      .then(data => {
+        const list = document.getElementById("notifications");
+        list.innerHTML = data.map(n => `<li>${n.message}</li>`).join("");
+      });
+  </script>
+</body>
+</html>
