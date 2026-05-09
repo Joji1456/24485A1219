@@ -1,1 +1,3 @@
-# 24485A1219
+# Campus Notifications Frontend
+
+Campus Notifications is a simple and responsive frontend application designed for managing and viewing campus-related notifications efficiently. The project includes features such as notification filtering, priority inbox management, and an organized all notifications section to improve the user experience. The interface is built with a clean and modern design suitable for frontend evaluation projects and academic demonstrations. This project showcases frontend development skills including responsive layouts, UI structuring, component organization, and user-friendly design implementation.
